@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secret-chat</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+        }
+        p{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: lighter;
+            color: white;
+            padding-top: 20px;
+        }
+        h3{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: lighter;
+            color: white;
+            padding-top: 20px;
+        }
+        h2{
+            color: white;
+        }
+        span{
+            color: red;
+        }
+        main{
+            padding: 20px 200px 0px 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        form{
+            text-align: center;
+        }
+        button{
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+        form > div{
+            padding: 10px 0px;
+        }
+        input{
+            padding: 10px 5px;
+        }
+        h4{
+            color: white;
+        }
+        h2{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>make secret chat for you and your friends</p>
+    <main>
+        <section>
+            <h3><span>encode</span> a secret text</h3>
+                <form id="encode-form" action="#">
+                    <div>
+                        <input required id="encode-input" type="text" placeholder="enter your text...">
+                        <input required id="encode-key" type="text" placeholder="enter your key...">
+                    </div>
+                    <div>
+                        <button id="encode-btn" type="submit">encode</button>
+                    </div>
+                    <div>
+                        <h2 id="show-encode-text"></h2>
+                        <h4>don't forget your cipher key : <span id="show-encode-key"></span></h4>
+                    </div>
+                </form>                       
+        </section>
+
+
+
+
+        <section>
+            <h3><span>decode</span> a secret text</h3>
+                <form id="decode-form" action="#">
+                    <div>
+                        <input required id="decode-input" type="text" placeholder="enter your text...">
+                        <input required id="decode-key" type="text" placeholder="enter your key...">
+                    </div>
+                    <div>
+                        <button id="decode-btn" type="submit">decode</button>
+                    </div>
+                    <div>
+                        <h2 id="show-decode-text"></h2>
+                        <h4>don't forget your cipher key : <span id="show-decode-key"></span></h4>
+                    </div>
+                </form>                    
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
